@@ -6,6 +6,7 @@ const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    gap: 16px;
 `
 
 const VideoList = ({videos}) => {

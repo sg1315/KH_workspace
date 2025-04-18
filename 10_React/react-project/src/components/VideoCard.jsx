@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import VideoList from './VideoList'
 
 const Container = styled.div`
     width: 320px;
@@ -53,7 +52,7 @@ const VideoCard = ({video}) => {
     return (
         <Container>
             <Thumbnail 
-                src={video.Thumbnail}
+                src={video.thumbnail}
                 alt={video.title}
             />
             {/* 채널로고, 타이틀, 채널명, 조회 */}

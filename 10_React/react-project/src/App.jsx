@@ -7,21 +7,42 @@ import Heading from './components/Heading'
 import VideoList from './components/VideoList'
 
 const videoData = [{
-  thumbnail: "https://i.ytimg.com/an_webp/juM_qadVY1E/mqdefault_6s.webp?du=3000&sqp=CLa4h8AG&rs=AOn4CLDfjDK86G1GfhXWx0R_1QDHYsGwDw",
+  thumbnail: "https://i.ytimg.com/an_webp/ugR9MOkqK_g/mqdefault_6s.webp?du=3000&sqp=CKi9h8AG&rs=AOn4CLCHATRFJmBeirLG2dsfaKqEhEvgGw",
   title: "빵빵이와 옥자의 진솔한 대화(물리)",
   logo: "https://yt3.ggpht.com/wYRkjS6E0mMZ-np2jNwjVaCNzQMpxs1VkdQ_p25oe0aaSj0awd7f9xRUcrwI6rVOQE7kjZQ6l4A=s48-c-k-c0x00ffffff-no-rj",
   channelName: "빵빵이의 일상",
   views: '8.3만',
   date: "2시간 전"
 },{
-  thumbnail: "https://i.ytimg.com/an_webp/juM_qadVY1E/mqdefault_6s.webp?du=3000&sqp=CLa4h8AG&rs=AOn4CLDfjDK86G1GfhXWx0R_1QDHYsGwDw",
+  thumbnail: "https://i.ytimg.com/an_webp/ugR9MOkqK_g/mqdefault_6s.webp?du=3000&sqp=CKi9h8AG&rs=AOn4CLCHATRFJmBeirLG2dsfaKqEhEvgGw",
   title: "빵빵이와 옥자의 진솔한 대화(물리)",
   logo: "https://yt3.ggpht.com/wYRkjS6E0mMZ-np2jNwjVaCNzQMpxs1VkdQ_p25oe0aaSj0awd7f9xRUcrwI6rVOQE7kjZQ6l4A=s48-c-k-c0x00ffffff-no-rj",
   channelName: "빵빵이의 일상",
   views: '8.3만',
   date: "2시간 전"
 },{
-  thumbnail: "https://i.ytimg.com/an_webp/juM_qadVY1E/mqdefault_6s.webp?du=3000&sqp=CLa4h8AG&rs=AOn4CLDfjDK86G1GfhXWx0R_1QDHYsGwDw",
+  thumbnail: "https://i.ytimg.com/an_webp/ugR9MOkqK_g/mqdefault_6s.webp?du=3000&sqp=CKi9h8AG&rs=AOn4CLCHATRFJmBeirLG2dsfaKqEhEvgGw",
+  title: "빵빵이와 옥자의 진솔한 대화(물리)",
+  logo: "https://yt3.ggpht.com/wYRkjS6E0mMZ-np2jNwjVaCNzQMpxs1VkdQ_p25oe0aaSj0awd7f9xRUcrwI6rVOQE7kjZQ6l4A=s48-c-k-c0x00ffffff-no-rj",
+  channelName: "빵빵이의 일상",
+  views: '8.3만',
+  date: "2시간 전"
+},{
+  thumbnail: "https://i.ytimg.com/an_webp/ugR9MOkqK_g/mqdefault_6s.webp?du=3000&sqp=CKi9h8AG&rs=AOn4CLCHATRFJmBeirLG2dsfaKqEhEvgGw",
+  title: "빵빵이와 옥자의 진솔한 대화(물리)",
+  logo: "https://yt3.ggpht.com/wYRkjS6E0mMZ-np2jNwjVaCNzQMpxs1VkdQ_p25oe0aaSj0awd7f9xRUcrwI6rVOQE7kjZQ6l4A=s48-c-k-c0x00ffffff-no-rj",
+  channelName: "빵빵이의 일상",
+  views: '8.3만',
+  date: "2시간 전"
+},{
+  thumbnail: "https://i.ytimg.com/an_webp/ugR9MOkqK_g/mqdefault_6s.webp?du=3000&sqp=CKi9h8AG&rs=AOn4CLCHATRFJmBeirLG2dsfaKqEhEvgGw",
+  title: "빵빵이와 옥자의 진솔한 대화(물리)",
+  logo: "https://yt3.ggpht.com/wYRkjS6E0mMZ-np2jNwjVaCNzQMpxs1VkdQ_p25oe0aaSj0awd7f9xRUcrwI6rVOQE7kjZQ6l4A=s48-c-k-c0x00ffffff-no-rj",
+  channelName: "빵빵이의 일상",
+  views: '8.3만',
+  date: "2시간 전"
+},{
+  thumbnail: "https://i.ytimg.com/an_webp/ugR9MOkqK_g/mqdefault_6s.webp?du=3000&sqp=CKi9h8AG&rs=AOn4CLCHATRFJmBeirLG2dsfaKqEhEvgGw",
   title: "빵빵이와 옥자의 진솔한 대화(물리)",
   logo: "https://yt3.ggpht.com/wYRkjS6E0mMZ-np2jNwjVaCNzQMpxs1VkdQ_p25oe0aaSj0awd7f9xRUcrwI6rVOQE7kjZQ6l4A=s48-c-k-c0x00ffffff-no-rj",
   channelName: "빵빵이의 일상",
