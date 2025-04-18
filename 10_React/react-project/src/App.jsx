@@ -2,32 +2,44 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Hello from './components/Hello'
+import Heading from './components/Heading'
+import VideoList from './components/VideoList'
+
+const videoData = [{
+  thumbnail: "https://i.ytimg.com/an_webp/juM_qadVY1E/mqdefault_6s.webp?du=3000&sqp=CLa4h8AG&rs=AOn4CLDfjDK86G1GfhXWx0R_1QDHYsGwDw",
+  title: "빵빵이와 옥자의 진솔한 대화(물리)",
+  logo: "https://yt3.ggpht.com/wYRkjS6E0mMZ-np2jNwjVaCNzQMpxs1VkdQ_p25oe0aaSj0awd7f9xRUcrwI6rVOQE7kjZQ6l4A=s48-c-k-c0x00ffffff-no-rj",
+  channelName: "빵빵이의 일상",
+  views: '8.3만',
+  date: "2시간 전"
+},{
+  thumbnail: "https://i.ytimg.com/an_webp/juM_qadVY1E/mqdefault_6s.webp?du=3000&sqp=CLa4h8AG&rs=AOn4CLDfjDK86G1GfhXWx0R_1QDHYsGwDw",
+  title: "빵빵이와 옥자의 진솔한 대화(물리)",
+  logo: "https://yt3.ggpht.com/wYRkjS6E0mMZ-np2jNwjVaCNzQMpxs1VkdQ_p25oe0aaSj0awd7f9xRUcrwI6rVOQE7kjZQ6l4A=s48-c-k-c0x00ffffff-no-rj",
+  channelName: "빵빵이의 일상",
+  views: '8.3만',
+  date: "2시간 전"
+},{
+  thumbnail: "https://i.ytimg.com/an_webp/juM_qadVY1E/mqdefault_6s.webp?du=3000&sqp=CLa4h8AG&rs=AOn4CLDfjDK86G1GfhXWx0R_1QDHYsGwDw",
+  title: "빵빵이와 옥자의 진솔한 대화(물리)",
+  logo: "https://yt3.ggpht.com/wYRkjS6E0mMZ-np2jNwjVaCNzQMpxs1VkdQ_p25oe0aaSj0awd7f9xRUcrwI6rVOQE7kjZQ6l4A=s48-c-k-c0x00ffffff-no-rj",
+  channelName: "빵빵이의 일상",
+  views: '8.3만',
+  date: "2시간 전"
+}]
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* <Heading type="h2"/>
+      <Heading/>
+      <Heading>
+        무엇을 도와드릴까요?
+      </Heading>
+      <Hello/> */}
+      <VideoList videos={videoData}/>
     </>
   )
 }
