@@ -19,46 +19,48 @@ class CommentList extends Component {
         super(props);
         this.state = {
             commentList: [],
-        }
+        };
     }
 
     componentDidMount() {
         //setInterval : 일정시간마다 반복해서 동작하는 비동기 함수
         setInterval(() => {
-            const {commentList} = this.state;
+            const { commentList } = this.state;
 
-            if(commentList.length < serverComments.length) {
-                const index = commentList.length; // 0;
+            if (commentList.length < serverComments.length) {
+                const nextComment = serverComments[commentList.length];
 
-                commentList.push(serverComments[index]);
                 this.setState({
                     commentList: [...commentList, nextComment],
                 });
             } else {
                 this.setState({
-                    commentList: []
-                })
+                    commentList: [],
+                });
             }
         }, 3000);
     }
 
     componentWillUnmount() {
-        const {commentList} = this.state;
+        clearInterval(this.interval); // 컴포넌트가 언마운트될 때 interval 정리
     }
 
     render() {
+        const { commentList } = this.state;
+
         return (
             <div>
-                {
-                    this.state.commentList.map(c =>
-                        <Comment key={c.id}
-                            id={c.id}
-                            message = {c.message}
-                        />)
-                }
+                {commentList.map((c) => (
+                    <Comment
+                    key={c.id}
+                    id={c.id}
+                    message={c.message}
+                    />
+                ))}
             </div>
-        )
+        );
     }
 }
+
 
 export default CommentList
