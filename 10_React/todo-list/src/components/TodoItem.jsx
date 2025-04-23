@@ -36,6 +36,7 @@ const DeleteButton = styled.button`
 
     &:hover{
         color: #ac2020;
+        color: rgb(123,20,20)
     }
 `
 
