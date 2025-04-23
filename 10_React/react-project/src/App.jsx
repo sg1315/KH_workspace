@@ -8,6 +8,9 @@ import LandingPage from './components/useState/LandingPage'
 import UseRefTest from './components/useRef/UseRefTest'
 import UseRefScroll from './components/useRef/UseRefScroll'
 import UseMemoTest from './components/useMemo/UseMemoTest'
+import UseCallbackTest from './components/useCallback/UseCallbackTest'
+import EffectView from './components/useEffect/EffectView'
+
 
 function App() {
 
@@ -18,7 +21,9 @@ function App() {
       {/* <LandingPage/> */}
       {/* <UseRefTest/> */}
       {/* <UseRefScroll/> */}
-      <UseMemoTest/>
+      {/* <UseMemoTest/> */}
+      {/* <UseCallbackTest/> */}
+      <EffectView/>
     </>
   )
 }
