@@ -15,6 +15,7 @@ const useTodoStore = create((set, get) => ({
         text: "숨쉬기",
         completed: false,
     }],
+    filter: 'all', //all, active, completed
     
     toggleTodo: (id) => set(state => ({
         todos: state.todos.map((todo) => 
@@ -25,6 +26,20 @@ const useTodoStore = create((set, get) => ({
     deleteTodo: (id) => set(state => ({
         todos: state.todos.filter(todo => todo.id !== id)
     })),
+    
+    setFilter: (filter) => set({filter}), 
+    getFilterdTodos: () => {
+        const {todos, filter} = get();
+        switch(filter){
+            case "active":
+                return todos.filter(todo => !todo.completed);
+            case "completed":
+                return todos.filter(todo => todo.completed);
+            default:
+                return todos;
+        }
+
+    }
 }))
 
 export default useTodoStore
