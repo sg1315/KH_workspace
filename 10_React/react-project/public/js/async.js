@@ -11,19 +11,47 @@ const serverData = [{
 }]
 
 //기존콜백방식
-function getUser(data, successCallback, errorCallback){
-    //일반함수내에서 비동기작업 실행
-    setTimeout(() => {
-        //완료후 callback을 통한 데이터 전달
-        const user = serverData.filter(u => u.id === data.id);
-        if(user.length > 0) successCallback(user);
-        else errorCallback("user를 찾을 수 없습니다.");
+// function getUser(data, successCallback, errorCallback){
+//     //일반함수내에서 비동기작업 실행
+//     setTimeout(() => {
+//         //완료후 callback을 통한 데이터 전달
+//         const user = serverData.filter(u => u.id === data.id);
 
-    }, 3000)
+//         if(user.length > 0) successCallback(user);
+//         else errorCallback("user를 찾을 수 없습니다.");
+//     }, 3000);
+// }
+
+// getUser({id: 5}, (user) =>{
+//     console.log(user);
+// }, (erroMsg) => {
+//     console.log(erroMsg);
+// })
+
+function getUser(data){
+    //Promise -> 비동기작업을 실행해줄 객체
+    return new Promise((resolve, reject) => {
+        //resolve : 성공시 실행해줄 함수
+        //reject : 실패시 실행해줄 함수
+
+        //Promise내에서 비동기 함수 실행
+        setTimeout(() => {
+            //완료후 정해진 함수를 통한 데이터 전달
+            const user = serverData.filter(u => u.id === data.id);
+
+            if(user.length > 0) resolve(user);
+            else reject("user를 찾을 수 없습니다.");
+        }, 3000);
+    })
 }
 
-getUser({id: 1}, () =>{
-    console.log(user);
-}, (erroMsg) => {
-    console.log(erroMsg);
-})
+getUser({id: 2})
+    .then(result => {
+        console.log("then 결과 : ", result);
+    })
+    .catch(error => {
+        console.log("then 결과 : ", error);
+    })
+    .finally(() => {
+        console.log("finally 실행");
+    })
