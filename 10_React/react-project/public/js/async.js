@@ -45,13 +45,26 @@ function getUser(data){
     })
 }
 
-getUser({id: 2})
-    .then(result => {
-        console.log("then 결과 : ", result);
-    })
-    .catch(error => {
-        console.log("then 결과 : ", error);
-    })
-    .finally(() => {
-        console.log("finally 실행");
-    })
+// getUser({id: 2})
+//     .then(result => {
+//         console.log("then 결과 : ", result);
+//     })
+//     .catch(error => {
+//         console.log("then 결과 : ", error);
+//     })
+//     .finally(() => {
+//         console.log("finally 실행");
+//     })
+
+async function testAsync() {
+    try{
+        const result = await getUser({id: 3});
+        console.log("await 결과 : ", result);
+    } catch(error){
+        console.log("catch 결과 : ", error);
+    } finally{
+        console.log("async/await 실행완료");
+    }
+}
+
+testAsync();
