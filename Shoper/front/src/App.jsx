@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import './App.css';
-import theme from './assets/styles/theme';
-import GlobalStyle from './assets/styles/GrobalStyle';
+import theme from './styles/theme';
+import GlobalStyle from './styles/GrobalStyle';
 import { Routes, BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Layout from './components/Layout';
