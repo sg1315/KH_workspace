@@ -24,7 +24,7 @@ const Header = () => {
           <Nav>
             <NavItem to="/">홈</NavItem>
             <NavItem to="/products">상품</NavItem>
-            <NavItem to="/question">QnA 게시판</NavItem>
+            <NavItem to="/question">Q&A 게시판</NavItem>
           </Nav>
         </MobileMenu>
 
@@ -32,7 +32,7 @@ const Header = () => {
         <DesktopNav>
           <NavItem to="/">홈</NavItem>
           <NavItem to="/products">상품</NavItem>
-          <NavItem to="/question">QnA 게시판</NavItem>
+          <NavItem to="/question">Q&A 게시판</NavItem>
         </DesktopNav>
 
         <DesktopUserMenu>
@@ -65,7 +65,7 @@ const Logo = styled(Link)`
   color: ${({ theme }) => theme.colors.primary};
 
   ${media.md`
-  font-size: ${({ theme }) => theme.fontSizes['2xl']};
+   font-size: ${({ theme }) => theme.fontSizes['2xl']}; 
   `}
 `;
 
@@ -74,8 +74,8 @@ const DesktopNav = styled.nav`
   gap: ${({ theme }) => theme.spacing[8]};
 
   ${media.md`
-    display: flex;
-  `}
+        display: flex;
+    `}
 `;
 
 const DesktopUserMenu = styled.nav`
@@ -83,8 +83,8 @@ const DesktopUserMenu = styled.nav`
   gap: ${({ theme }) => theme.spacing[8]};
 
   ${media.md`
-    display: flex;
-  `}
+        display: flex;
+    `}
 `;
 
 const NavItem = styled(Link)`
@@ -104,8 +104,8 @@ const MenuButton = styled(GiHamburgerMenu)`
   z-index: 10;
 
   ${media.md`
-    display: none;
-  `}
+        display: none;
+    `}
 `;
 
 const MobileMenu = styled.div`
@@ -114,7 +114,7 @@ const MobileMenu = styled.div`
   gap: ${({ theme }) => theme.spacing[4]};
   position: fixed;
   top: 0;
-  right: 0%;
+  right: 0;
   width: 100%;
   max-width: 400px;
   height: 100vh;
@@ -124,11 +124,11 @@ const MobileMenu = styled.div`
   padding: ${({ theme }) => theme.spacing[4]};
   padding-top: ${({ theme }) => theme.spacing[16]};
   z-index: 5;
-  overflow: auto;
+  overflow-y: auto;
 
   ${media.md`
-    display: none;
-  `}
+        display: none;
+    `}
 `;
 
 const Nav = styled.nav`

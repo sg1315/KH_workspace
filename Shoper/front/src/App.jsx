@@ -1,10 +1,12 @@
 import { ThemeProvider } from 'styled-components';
 import './App.css';
 import theme from './styles/theme';
-import GlobalStyle from './styles/GrobalStyle';
-import { Routes, BrowserRouter as Router, Route } from 'react-router-dom';
+import GlobalStyle from './styles/GlobalStyle';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Layout from './components/Layout';
+import { ToastContainer } from 'react-toastify';
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
@@ -14,9 +16,20 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
         </Layout>
       </Router>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        closeOnClick
+        draggable
+        hideProgressBar={false}
+        newestOnTop
+        theme="light"
+        pauseOnHover
+      />
     </ThemeProvider>
   );
 }
