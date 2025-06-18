@@ -8,7 +8,7 @@ function App() {
   const [downloadFileInfo, setDownloadFileInfo] = useState(null);
   const [status, setStatus] = useState('');
 
-  const uploadFile = async () => {
+  const uploadFile = async (path) => {
     try{
       setStatus('업로드 중...');
 
@@ -21,7 +21,7 @@ function App() {
       //lambda api 호출 -> presigned url요청
       const response = await axios.get('https://ddqzeirr4e.execute-api.ap-northeast-2.amazonaws.com/default/getPresignedUrl',{
         params: {
-          filename: encodingFileName,
+          filename: path + encodingFileName,
           contentType: file.type,
         }
       })
@@ -36,7 +36,8 @@ function App() {
           headers: {
             "Content-Type": file.type,
           }
-        })
+        });
+
         setDownloadFileInfo({
           filename: encodingFileName,
           contentType: file.type,
@@ -97,6 +98,9 @@ function App() {
         <button onClick={uploadFile} disabled={!file}>
           업로드
         </button>
+        <button onClick={() => uploadFile("user-profile/")} disabled={!file}>
+          프로필 업로드
+        </button>
       </div>
 
       <div className='download-section'>
@@ -116,6 +120,9 @@ function App() {
         status !== '' &&
         <div className='status'>
           <p>{status}</p>
+          {
+            <img src={`https://dxzteo0ncwoo7.cloudfront.net/user-profile/${downloadFileInfo?.filename}`}  />
+          }
         </div>
       }
     </div>
