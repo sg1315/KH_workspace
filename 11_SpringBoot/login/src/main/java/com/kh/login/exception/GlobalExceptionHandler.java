@@ -12,7 +12,7 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    //BaseException 및 그 하위예외 처리
+    //BaseException및 그 하위예외처리
     @ExceptionHandler(BaseException.class)
     public ResponseEntity<ErrorResponse> handleBaseException(BaseException ex, HttpServletRequest request) {
         log.error("BaseException 발생 : {}", ex.getMessage(), ex);
@@ -24,7 +24,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(NoHandlerFoundException.class)
     public ResponseEntity<ErrorResponse> handleNoHandlerFoundException(NoHandlerFoundException ex,
                                                                        HttpServletRequest request) {
-        log.error("핸들러를 찾을 수 없음 : {}", ex.getMessage(), ex);
+        log.error("핸드러를 찾을 수 없음 : {}", ex.getMessage());
 
         ErrorResponse error = ErrorResponse.of(ErrorCode.RESOURCE_NOT_FOUND, request.getRequestURI());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
@@ -37,5 +37,4 @@ public class GlobalExceptionHandler {
         ErrorResponse error = ErrorResponse.of(ErrorCode.INVALID_USER_INPUT, ex.getMessage(), request.getRequestURI());
         return ResponseEntity.badRequest().body(error);
     }
-
 }

@@ -17,7 +17,7 @@ public abstract class BaseException extends RuntimeException {
     }
 
     //ErrorCode는 유지하되, 메세지는 커스텀 문자열을 사용할 수 있음.
-    //특정상황에 더 구체적인 설명을 하고 싶을 때 errorcode의 값을 늘리지않고 간단하게 처리 가능
+    //특정상황에 더 구체적인 설명을 하고싶을 때 errorcode의 값을 늘리지않고 간단하게 처리 가능.
     public BaseException(final ErrorCode errorCode, String message) {
         super(message);
         this.errorCode = errorCode;
@@ -29,5 +29,4 @@ public abstract class BaseException extends RuntimeException {
         super(message, cause);
         this.errorCode = errorCode;
     }
-
 }
