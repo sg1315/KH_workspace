@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring AI Chat API 테스트</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Spring AI Chat API 테스트</h1>
+        
+        <div class="section">
+            <h2>공부관련 명언을 세 개 알려줘</h2>
+            <button onclick="runTest()">테스트 실행</button>
+            <div id="testResult" class="result" style="display: none;"></div>
+        </div>
+        <br>
+        <div class="section">
+            <h2>AI 이미지 생성</h2>
+            <input type="text" id="imagePrompt" placeholder="생성할 이미지를 설명해주세요..." />
+            <button onclick="generateImage()">이미지 생성</button>
+            <div id="imageResult" class="result" style="display: none;"></div>
+        </div>
+        <br>
+        <div class="section">
+            <h2>PromptTemplate 예제</h2>
+            <input type="text" id="templateName" placeholder="이름을 입력해주세요..." />
+            <button onclick="promptTemplate()">템플릿 실행</button>
+            <div id="templateResult" class="result" style="display: none;"></div>
+        </div>
+        <br>
+        <div class="section">
+            <h2>영화 리스트 생성</h2>
+            <input type="text" id="directorName" placeholder="감독 이름을 입력해주세요..." />
+            <button onclick="generateMovieList()">영화 리스트 생성</button>
+            <div id="movieResult" class="result" style="display: none;"></div>
+        </div>
+        <br>
+        <div class="section">
+            <h2>Function Calling 예제</h2>
+            <input type="text" id="functionQuestion" placeholder="시간 관련 질문을 입력해주세요..." />
+            <div class="button-group" id="functionButtons">
+                <button onclick="functionCalling('ko')">한국어</button>
+                <button onclick="functionCalling('en')">English</button>
+            </div>
+            <div id="functionResult" class="result" style="display: none;"></div>
+        </div>
+        <br>
+        <div class="section">
+            <h2>SQL 자연어 질의 테스트</h2>
+            <input type="text" id="sqlQuestion" placeholder="예: 모든 책 목록 보여줘" />
+            <button onclick="runSqlQuery()">SQL 질의 실행</button>
+            <div id="sqlResult" class="result" style="display: none;"></div>
+        </div>
+        <br>
+        <div class="section">
+            <h2>RAG 기반 문서 챗봇</h2>
+            <p style="margin-bottom:8px; color:#555;">호텔 이용 가이드 PDF를 기반으로 답변합니다.</p>
+            <input type="text" id="ragQuestion" placeholder="호텔 이용 가이드에 대해 질문하세요..." />
+            <button onclick="askRag()">질문하기</button>
+            <div id="ragAnswerResult" class="result" style="display: none;"></div>
+        </div>
+        <br>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html> 
